@@ -7,10 +7,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     software-properties-common \
     git \
-    libgl1-mesa-glx \
-    libgl1-mesa-dev \
     && rm -rf /var/lib/apt/lists/*
     
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 COPY . .
 

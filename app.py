@@ -36,7 +36,9 @@ except Exception as ex:
     st.error(f"Unable to load model. Check the specified path: {model_path}")
     st.error(ex)
 
-source_radio = settings.IMAGE
+st.sidebar.header("Image/Video Config")
+source_radio = st.sidebar.radio(
+    "Select Source", settings.SOURCES_LIST)
 
 source_img = None
 # If image is selected
@@ -84,7 +86,7 @@ if source_radio == settings.IMAGE:
                 except Exception as ex:
                     # st.write(ex)
                     st.write("No image is uploaded yet!")
-                    
+
 elif source_radio == settings.VIDEO:
     helper.play_stored_video(confidence, model)
 
@@ -95,7 +97,7 @@ elif source_radio == settings.RTSP:
     helper.play_rtsp_stream(confidence, model)
 
 elif source_radio == settings.YOUTUBE:
-    helper.play_youtube_video(confidence, model)                    
+    helper.play_youtube_video(confidence, model)
                     
 else:
     st.error("Please select a valid source type!")

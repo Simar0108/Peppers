@@ -16,9 +16,13 @@ ROOT = root_path.relative_to(Path.cwd())
 
 # Sources
 IMAGE = 'Image'
+VIDEO = 'Video'
+WEBCAM = 'Webcam'
+RTSP = 'RTSP'
+YOUTUBE = 'Youtube'
 
 
-SOURCES_LIST = [IMAGE]
+SOURCES_LIST = [IMAGE, VIDEO, WEBCAM, RTSP, YOUTUBE]
 
 # Images config
 IMAGES_DIR = ROOT / 'images'

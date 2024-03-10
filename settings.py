@@ -25,6 +25,17 @@ IMAGES_DIR = ROOT / 'images'
 DEFAULT_IMAGE = IMAGES_DIR / 'sample_image.jpeg'
 DEFAULT_DETECT_IMAGE = IMAGES_DIR / 'sample_detected_image.jpeg'
 
+#videos congif
+VIDEO_DIR = ROOT / 'videos'
+VIDEO_1_PATH = VIDEO_DIR / 'example_vid.mp4'
+VIDEO_2_PATH = VIDEO_DIR / 'example_vid.mp4'
+VIDEO_3_PATH = VIDEO_DIR / 'example_vid.mp4'
+VIDEOS_DICT = {
+    'video_1' : VIDEO_1_PATH, 
+    'video_2' : VIDEO_2_PATH, 
+    'video_3' : VIDEO_3_PATH
+    }
+
 # ML Model config
 MODEL_DIR = ROOT / 'weights'
 DETECTION_MODEL = MODEL_DIR / 'best.pt'
